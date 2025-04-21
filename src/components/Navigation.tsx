@@ -24,12 +24,8 @@ const Navigation = () => {
         isScrolled ? 'bg-white/90 shadow-md backdrop-blur-sm py-2' : 'bg-transparent py-4'
       }`}
     >
-      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-        <a 
-          href="#home" 
-          className="text-4xl md:text-5xl font-serif font-bold text-portfolio-blue mb-2 md:mb-0"
-          aria-label="Logo - Sujal Bazari"
-        >
+      <div className="container mx-auto px-4 flex justify-between items-center">
+        <a href="#home" className="text-portfolio-blue text-xl md:text-2xl font-serif font-bold">
           Sujal Bazari
         </a>
         
@@ -45,12 +41,12 @@ const Navigation = () => {
         </button>
         
         {/* Desktop navigation */}
-        <nav className="hidden md:flex flex-1 justify-center space-x-12">
+        <nav className="hidden md:flex space-x-8">
           {['home', 'about', 'skills', 'projects', 'resume', 'contact'].map((item) => (
             <a
               key={item}
               href={`#${item}`}
-              className="text-portfolio-dark hover:text-portfolio-blue transition-colors capitalize relative after:content-[''] after:absolute after:w-full after:h-[2px] after:bg-portfolio-blue after:left-0 after:bottom-0 after:scale-x-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
+              className="text-portfolio-dark hover:text-portfolio-blue transition-colors link-underline capitalize"
             >
               {item}
             </a>
@@ -82,4 +78,3 @@ const Navigation = () => {
 };
 
 export default Navigation;
-

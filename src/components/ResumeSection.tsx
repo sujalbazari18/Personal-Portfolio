@@ -1,55 +1,218 @@
-import React from 'react';
+
+import { 
+  Briefcase, 
+  GraduationCap, 
+  Award,
+  Calendar,
+  MapPin
+} from "lucide-react";
 
 const ResumeSection = () => {
   return (
-    <section id="resume" className="py-20 bg-gray-50">
+    <section id="resume" className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl font-serif font-bold text-center mb-10 tracking-widest relative section-underline">
-          RESUME
-        </h2>
-        {/* Resume Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Education */}
-          <div>
-            <h3 className="text-3xl font-semibold mb-4 text-portfolio-blue">Education</h3>
-            <div className="mb-6">
-              <h4 className="text-xl font-semibold text-portfolio-dark">Master of Science in Computer Science</h4>
-              <p className="text-gray-600">University of Example, City, State</p>
-              <p className="text-gray-600">2018 - 2020</p>
-              <p className="text-gray-700 mt-2">Relevant coursework: Data Structures and Algorithms, Database Systems, Artificial Intelligence.</p>
+        <h2 className="section-title text-center mx-auto">My Resume</h2>
+        
+        <div className="mt-12 flex flex-col md:flex-row gap-12">
+          <div className="md:w-1/2">
+            <div className="flex items-center mb-8">
+              <div className="p-3 bg-portfolio-blue/10 rounded-full mr-4">
+                <Briefcase className="text-portfolio-blue" size={24} />
+              </div>
+              <h3 className="text-2xl font-bold">Work Experience</h3>
             </div>
-            <div>
-              <h4 className="text-xl font-semibold text-portfolio-dark">Bachelor of Science in Software Engineering</h4>
-              <p className="text-gray-600">University of Example, City, State</p>
-              <p className="text-gray-600">2014 - 2018</p>
-              <p className="text-gray-700 mt-2">GPA: 3.8/4.0, Dean's List all semesters.</p>
+            
+            {/* Experience Items */}
+            <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
+              
+              <div className="relative flex items-start group">
+                <div className="flex flex-col items-center">
+                  <div className="h-10 w-10 rounded-full border-2 border-portfolio-blue flex items-center justify-center bg-white z-10">
+                    <Calendar size={16} className="text-portfolio-blue" />
+                  </div>
+                  <div className="h-full w-px bg-gray-300"></div>
+                </div>
+                
+                <div className="ml-6 bg-white p-5 rounded-lg shadow-md border-l-4 border-portfolio-blue">
+                  <div className="flex justify-between items-center mb-1">
+                    <h4 className="text-lg font-bold text-portfolio-dark">Book-Store API Project</h4>
+                    <span className="text-sm text-gray-500">Mar 2025</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500 mb-3">
+                    <MapPin size={14} className="mr-1" />
+                    <span>Backend Developer | MongoDB & Node.js</span>
+                  </div>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                    <li>Designed and deployed a scalable RESTful API for managing book inventory</li>
+                    <li>Enhanced security protocols with JWT token-based authentication</li>
+                    <li>Boosted query performance through efficient database integration</li>
+                    <li>Implemented structured error handling and input validation</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="relative flex items-start group">
+                <div className="flex flex-col items-center">
+                  <div className="h-10 w-10 rounded-full border-2 border-portfolio-blue flex items-center justify-center bg-white z-10">
+                    <Calendar size={16} className="text-portfolio-blue" />
+                  </div>
+                  <div className="h-full w-px bg-gray-300"></div>
+                </div>
+                
+                <div className="ml-6 bg-white p-5 rounded-lg shadow-md border-l-4 border-portfolio-blue">
+                  <div className="flex justify-between items-center mb-1">
+                    <h4 className="text-lg font-bold text-portfolio-dark">Smart Voice Assistant</h4>
+                    <span className="text-sm text-gray-500">Jan 2025</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500 mb-3">
+                    <MapPin size={14} className="mr-1" />
+                    <span>Mobile Developer | React Native</span>
+                  </div>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                    <li>Built an interactive mobile assistant using React Native</li>
+                    <li>Incorporated real-time voice recognition APIs</li>
+                    <li>Connected external platforms for weather, scheduling updates</li>
+                    <li>Developed clean and responsive UI with immediate visual feedback</li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="relative flex items-start group">
+                <div className="flex flex-col items-center">
+                  <div className="h-10 w-10 rounded-full border-2 border-portfolio-blue flex items-center justify-center bg-white z-10">
+                    <Calendar size={16} className="text-portfolio-blue" />
+                  </div>
+                </div>
+                
+                <div className="ml-6 bg-white p-5 rounded-lg shadow-md border-l-4 border-portfolio-blue">
+                  <div className="flex justify-between items-center mb-1">
+                    <h4 className="text-lg font-bold text-portfolio-dark">Linux File System Simulator</h4>
+                    <span className="text-sm text-gray-500">Jul 2024</span>
+                  </div>
+                  <div className="flex items-center text-sm text-gray-500 mb-3">
+                    <MapPin size={14} className="mr-1" />
+                    <span>System Developer | C++</span>
+                  </div>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm">
+                    <li>Engineered a Linux-like file system simulator with C++</li>
+                    <li>Implemented essential file management commands</li>
+                    <li>Optimized search and indexing algorithms for better efficiency</li>
+                    <li>Applied OOP principles to model real-world file system structure</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
-
-          {/* Experience */}
-          <div>
-            <h3 className="text-3xl font-semibold mb-4 text-portfolio-blue">Experience</h3>
-            <div className="mb-6">
-              <h4 className="text-xl font-semibold text-portfolio-dark">Senior Software Engineer</h4>
-              <p className="text-gray-600">Tech Company, City, State</p>
-              <p className="text-gray-600">2020 - Present</p>
-              <ul className="list-disc list-inside text-gray-700 mt-2">
-                <li>Led a team of 5 engineers in developing and maintaining web applications.</li>
-                <li>Implemented new features that increased user engagement by 30%.</li>
-                <li>Improved code quality and reduced technical debt through code reviews and refactoring.</li>
-              </ul>
-            </div>
+          
+          <div className="md:w-1/2 mt-10 md:mt-0">
             <div>
-              <h4 className="text-xl font-semibold text-portfolio-dark">Software Engineer Intern</h4>
-              <p className="text-gray-600">Startup Company, City, State</p>
-              <p className="text-gray-600">Summer 2017</p>
-              <ul className="list-disc list-inside text-gray-700 mt-2">
-                <li>Developed a mobile app feature using React Native.</li>
-                <li>Assisted in testing and debugging software applications.</li>
-                <li>Contributed to the design and implementation of new features.</li>
-              </ul>
+              <div className="flex items-center mb-8">
+                <div className="p-3 bg-portfolio-teal/10 rounded-full mr-4">
+                  <GraduationCap className="text-portfolio-teal" size={24} />
+                </div>
+                <h3 className="text-2xl font-bold">Education</h3>
+              </div>
+              
+              <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
+                <div className="relative flex items-start group">
+                  <div className="flex flex-col items-center">
+                    <div className="h-10 w-10 rounded-full border-2 border-portfolio-teal flex items-center justify-center bg-white z-10">
+                      <GraduationCap size={16} className="text-portfolio-teal" />
+                    </div>
+                    <div className="h-full w-px bg-gray-300"></div>
+                  </div>
+                  
+                  <div className="ml-6 bg-white p-5 rounded-lg shadow-md border-l-4 border-portfolio-teal">
+                    <div className="flex justify-between items-center mb-1">
+                      <h4 className="text-lg font-bold text-portfolio-dark">Lovely Professional University</h4>
+                      <span className="text-sm text-gray-500">2022 - 2026</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-500 mb-3">
+                      <MapPin size={14} className="mr-1" />
+                      <span>Jalandhar, Punjab</span>
+                    </div>
+                    <p className="text-gray-700 text-sm">
+                      B.Tech in Computer Science and Engineering<br/>
+                      <span className="text-portfolio-teal">CGPA: 7.84</span>
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="relative flex items-start group">
+                  <div className="flex flex-col items-center">
+                    <div className="h-10 w-10 rounded-full border-2 border-portfolio-teal flex items-center justify-center bg-white z-10">
+                      <GraduationCap size={16} className="text-portfolio-teal" />
+                    </div>
+                  </div>
+                  
+                  <div className="ml-6 bg-white p-5 rounded-lg shadow-md border-l-4 border-portfolio-teal">
+                    <div className="flex justify-between items-center mb-1">
+                      <h4 className="text-lg font-bold text-portfolio-dark">Santi Niketan School</h4>
+                      <span className="text-sm text-gray-500">2020 - 2021</span>
+                    </div>
+                    <div className="flex items-center text-sm text-gray-500 mb-3">
+                      <MapPin size={14} className="mr-1" />
+                      <span>Balotra, Rajasthan</span>
+                    </div>
+                    <p className="text-gray-700 text-sm">
+                      12th with Science<br/>
+                      <span className="text-portfolio-teal">Percentage: 88.60%</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="mt-16">
+              <div className="flex items-center mb-8">
+                <div className="p-3 bg-portfolio-amber/10 rounded-full mr-4">
+                  <Award className="text-portfolio-amber" size={24} />
+                </div>
+                <h3 className="text-2xl font-bold">Certifications & Achievements</h3>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="bg-white p-5 rounded-lg shadow-md">
+                  <h4 className="font-bold mb-2">Data Structures & Algorithms (DSA) Certification</h4>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">Udemy</span>
+                    <span className="text-gray-500">Dec 2024</span>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-5 rounded-lg shadow-md">
+                  <h4 className="font-bold mb-2">Privacy and Security of Social Media and Cloud Computing</h4>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-gray-600">NPTEL</span>
+                    <span className="text-gray-500">Dec 2024</span>
+                  </div>
+                </div>
+                
+                <div className="bg-white p-5 rounded-lg shadow-md">
+                  <h4 className="font-bold mb-1">Achievements</h4>
+                  <ul className="list-disc list-inside text-gray-700 space-y-1 text-sm mt-2">
+                    <li>Achieved 1580+ rating on LeetCode with 400+ solved problems</li>
+                    <li>Earned 2-star rating on CodeChef showcasing competitive programming proficiency</li>
+                    <li>Secured top 10 rank in Capture the Flag (CTF) competition</li>
+                    <li>Participated in "Incredible India V" cultural showcase</li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+        
+        <div className="mt-16 text-center">
+          <a 
+            href="#" 
+            className="btn-primary inline-flex items-center"
+            onClick={(e) => {
+              e.preventDefault();
+              window.open("/resume.pdf", "_blank");
+            }}
+          >
+            Download CV
+          </a>
         </div>
       </div>
     </section>

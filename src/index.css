@@ -151,18 +151,4 @@
   .skill-progress {
     @apply h-full bg-gradient-to-r from-portfolio-blue to-portfolio-teal;
   }
-
-  .section-underline {
-    position: relative;
-  }
-  .section-underline::after {
-    content: '';
-    display: block;
-    margin: 0.2em auto 0 auto;
-    height: 8px;
-    width: 85%;
-    max-width: 400px;
-    background-color: #0d9488; /* portfolio-teal */
-    border-radius: 4px;
-  }
 }
