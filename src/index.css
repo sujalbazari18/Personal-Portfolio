@@ -98,7 +98,7 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-[#fdfcfb] to-[#e2d1c3] min-h-screen text-foreground font-sans;
+    @apply bg-gradient-to-br from-[#1A1F2C] to-[#221F26] min-h-screen text-foreground font-sans;
     scroll-behavior: smooth;
   }
 
@@ -150,5 +150,11 @@
   
   .skill-progress {
     @apply h-full bg-gradient-to-r from-portfolio-blue to-portfolio-teal;
+  }
+}
+
+@layer base {
+  body {
+    color: white; /* Ensure text is visible on dark background */
   }
 }
