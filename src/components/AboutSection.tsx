@@ -1,65 +1,11 @@
-import { useState, FormEvent } from "react";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Linkedin, 
-  Github,
-  Send
-} from "lucide-react";
 
 const AboutSection = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-  
-  const handleSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    try {
-      // In a real app, you'd send the form data to your backend
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      setSubmitStatus('success');
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      setSubmitStatus('error');
-    } finally {
-      setIsSubmitting(false);
-      
-      // Reset status after 5 seconds
-      setTimeout(() => {
-        setSubmitStatus(null);
-      }, 5000);
-    }
-  };
-
   return (
     <section id="about" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 max-w-6xl">
+      <div className="container mx-auto px-4">
         <h2 className="section-title text-center mx-auto">About Me</h2>
         
-        <div className="mt-16 flex flex-col md:flex-row gap-10 items-center justify-center">
+        <div className="mt-16 flex flex-col md:flex-row gap-10 items-center">
           <div className="md:w-2/5">
             <div className="relative">
               <div className="w-full max-w-md mx-auto aspect-[3/4] overflow-hidden rounded-lg shadow-xl">
