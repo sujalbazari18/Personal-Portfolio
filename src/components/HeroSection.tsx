@@ -37,14 +37,14 @@ const HeroSection = () => {
         </div>
         <div className="md:w-2/5 animate-fade-in" style={{animationDelay: '0.6s'}}>
           <div className="relative">
-            <div className="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-portfolio-blue to-portfolio-teal rounded-full mx-auto overflow-hidden border-4 border-white shadow-2xl">
+            <div className="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-portfolio-blue/20 to-portfolio-teal/20 rounded-full mx-auto overflow-hidden border-4 border-white/50 shadow-2xl">
               <img 
                 src="/lovable-uploads/508a7631-c2c1-466c-8073-3ea8d72e7a0d.png" 
-                alt="Sujal Bazari profile picture" 
+                alt="Profile Picture" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-4 right-0 md:right-10 bg-white p-3 rounded-lg shadow-lg">
+            <div className="absolute -bottom-4 right-0 md:right-10 bg-white/80 backdrop-blur-sm p-3 rounded-lg shadow-lg">
               <span className="text-sm font-medium">OPEN TO WORK</span>
             </div>
           </div>
