@@ -1,4 +1,3 @@
-
 import { 
   Briefcase, 
   GraduationCap, 
@@ -10,10 +9,10 @@ import {
 const ResumeSection = () => {
   return (
     <section id="resume" className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-6xl">
         <h2 className="section-title text-center mx-auto">My Resume</h2>
         
-        <div className="mt-12 flex flex-col md:flex-row gap-12">
+        <div className="mt-12 flex flex-col md:flex-row gap-12 justify-center">
           <div className="md:w-1/2">
             <div className="flex items-center mb-8">
               <div className="p-3 bg-portfolio-blue/10 rounded-full mr-4">

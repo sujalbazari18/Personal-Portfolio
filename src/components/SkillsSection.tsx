@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 
@@ -60,7 +59,7 @@ const SkillsSection = () => {
 
   return (
     <section id="skills" className="py-20">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-6xl">
         <h2 className="section-title text-center mx-auto">My Skills</h2>
         
         <div className="flex flex-wrap justify-center gap-4 mt-10 mb-10">
