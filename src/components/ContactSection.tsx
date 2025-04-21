@@ -68,7 +68,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-8 relative after:content-[''] after:block after:mx-auto after:w-full after:max-w-xs md:after:max-w-md after:h-2 after:bg-portfolio-teal after:rounded-full after:mt-2 tracking-widest">
+        <h2 className="text-5xl font-serif font-bold text-center mb-10 tracking-widest relative section-underline">
           GET IN TOUCH
         </h2>
         <div className="max-w-3xl mx-auto">

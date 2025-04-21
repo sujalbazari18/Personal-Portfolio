@@ -1,18 +1,23 @@
+
 import React, { useState } from 'react';
-import ProjectCard from './ProjectCard';
-import { projectsData } from '@/data/projectsData';
+
+const mockProjects = [
+  { id: 1, name: "Project Alpha", category: "web", desc: "Web project example." },
+  { id: 2, name: "Project Beta", category: "mobile", desc: "Mobile project example." },
+  { id: 3, name: "Project Gamma", category: "design", desc: "Design project example." },
+];
 
 const ProjectsSection = () => {
   const [activeTab, setActiveTab] = useState('all');
 
   const filteredProjects = activeTab === 'all'
-    ? projectsData
-    : projectsData.filter(project => project.category === activeTab);
+    ? mockProjects
+    : mockProjects.filter(project => project.category === activeTab);
 
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-8 relative after:content-[''] after:block after:mx-auto after:w-full after:max-w-xs md:after:max-w-md after:h-2 after:bg-portfolio-teal after:rounded-full after:mt-2 tracking-widest">
+        <h2 className="text-5xl font-serif font-bold text-center mb-10 tracking-widest relative section-underline">
           PROJECTS
         </h2>
         
@@ -36,7 +41,13 @@ const ProjectsSection = () => {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map(project => (
-            <ProjectCard key={project.id} project={project} />
+            <div key={project.id} className="rounded-lg p-6 bg-white shadow card-gradient">
+              <div className="text-xl font-bold mb-2">{project.name}</div>
+              <div className="text-gray-700">{project.desc}</div>
+              <div className="mt-2">
+                <span className="badge">{project.category}</span>
+              </div>
+            </div>
           ))}
         </div>
       </div>
