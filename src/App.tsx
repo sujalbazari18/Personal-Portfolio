@@ -11,7 +11,7 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => (
-  <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+  <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme" forcedTheme="dark">
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
