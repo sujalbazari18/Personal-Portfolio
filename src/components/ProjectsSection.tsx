@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -76,7 +75,9 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="section-title text-center mx-auto">My Projects</h2>
+        <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-3 relative after:content-[''] after:block after:mx-auto after:w-28 after:h-1.5 after:bg-portfolio-teal after:rounded-full after:mt-2">
+          My Projects
+        </h2>
         
         <div className="flex flex-wrap justify-center gap-4 mt-10 mb-12">
           {["all", "backend", "mobile", "system"].map((category) => (

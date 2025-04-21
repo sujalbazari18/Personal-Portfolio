@@ -37,16 +37,17 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="md:w-2/5 animate-fade-in" style={{animationDelay: '0.6s'}}>
-          <div className="relative">
-            <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-portfolio-blue to-portfolio-teal rounded-full mx-auto overflow-hidden border-4 border-white shadow-xl">
+          <div className="relative flex flex-col items-center">
+            <div className="w-72 h-72 md:w-[22rem] md:h-[22rem] bg-gradient-to-br from-portfolio-blue to-portfolio-teal rounded-full mx-auto overflow-hidden border-8 border-white shadow-2xl transition-all duration-300">
               <img 
                 src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1470" 
                 alt="Professional coder workspace" 
                 className="w-full h-full object-cover"
               />
             </div>
-            <div className="absolute -bottom-4 right-0 md:right-10 bg-white p-3 rounded-lg shadow-lg">
-              <span className="text-sm font-medium">5+ Years Experience</span>
+            <div className="absolute -bottom-8 right-1 md:right-12 bg-white px-6 py-4 rounded-xl shadow-2xl border-2 border-portfolio-blue flex items-center text-2xl font-semibold text-portfolio-blue md:text-3xl md:px-8 md:py-5 md:-bottom-12 animate-scale-in">
+              5<span className="text-portfolio-dark mx-1 text-xl md:text-2xl font-bold">+</span>
+              <span className="text-portfolio-teal font-extrabold">Years Experience</span>
             </div>
           </div>
         </div>
