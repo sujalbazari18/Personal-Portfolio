@@ -57,7 +57,7 @@ const ContactSection = () => {
 
   return (
     <section id="contact" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 max-w-6xl">
         <h2 className="section-title text-center mx-auto">Get In Touch</h2>
         
         <div className="mt-16 flex flex-col lg:flex-row gap-12">
