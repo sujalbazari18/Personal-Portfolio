@@ -38,10 +38,10 @@ const HeroSection = () => {
         </div>
         <div className="md:w-2/5 animate-fade-in" style={{animationDelay: '0.6s'}}>
           <div className="relative">
-            <div className="w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-portfolio-blue to-portfolio-teal rounded-full mx-auto overflow-hidden border-4 border-white shadow-xl">
+            <div className="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-portfolio-blue to-portfolio-teal rounded-full mx-auto overflow-hidden border-4 border-white shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1470" 
-                alt="Professional coder workspace" 
+                src="/lovable-uploads/38c8aebe-3da8-4dfb-89c7-28fd8c52d0d4.png" 
+                alt="Coding workspace" 
                 className="w-full h-full object-cover"
               />
             </div>
