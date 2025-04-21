@@ -1,4 +1,3 @@
-
 import { ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
@@ -40,8 +39,8 @@ const HeroSection = () => {
           <div className="relative">
             <div className="w-80 h-80 md:w-96 md:h-96 bg-gradient-to-br from-portfolio-blue to-portfolio-teal rounded-full mx-auto overflow-hidden border-4 border-white shadow-2xl">
               <img 
-                src="/lovable-uploads/38c8aebe-3da8-4dfb-89c7-28fd8c52d0d4.png" 
-                alt="Coding workspace" 
+                src="/lovable-uploads/508a7631-c2c1-466c-8073-3ea8d72e7a0d.png" 
+                alt="Sujal Bazari profile picture" 
                 className="w-full h-full object-cover"
               />
             </div>
