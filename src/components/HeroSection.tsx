@@ -46,7 +46,7 @@ const HeroSection = () => {
               />
             </div>
             <div className="absolute -bottom-4 right-0 md:right-10 bg-white p-3 rounded-lg shadow-lg">
-              <span className="text-sm font-medium">5+ Years Experience</span>
+              <span className="text-sm font-medium">OPEN TO WORK</span>
             </div>
           </div>
         </div>
