@@ -152,3 +152,11 @@
     @apply h-full bg-gradient-to-r from-portfolio-blue to-portfolio-teal;
   }
 }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-16px) scale(1.03); }
+}
+.animate-float {
+  animation: float 8s ease-in-out infinite alternate;
+}

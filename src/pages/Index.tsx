@@ -9,12 +9,12 @@ import ResumeSection from "@/components/ResumeSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { setupScrollAnimation } from "@/utils/scrollAnimation";
+import BackgroundTechIcons from "@/components/BackgroundTechIcons";
 
 const Index = () => {
   useEffect(() => {
-    // Setup scroll animations when component mounts
     setupScrollAnimation();
-    
+
     // Preload images
     const imageUrls = [
       "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1470",
@@ -23,7 +23,7 @@ const Index = () => {
       "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&q=80&w=1636",
       "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=1474"
     ];
-    
+
     imageUrls.forEach(url => {
       const img = new Image();
       img.src = url;
@@ -31,7 +31,8 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative font-sans">
+      <BackgroundTechIcons />
       <Navigation />
       <HeroSection />
       <AboutSection />
@@ -40,7 +41,7 @@ const Index = () => {
       <ResumeSection />
       <ContactSection />
       <Footer />
-      
+
       {/* Back to top button */}
       <a 
         href="#home" 
