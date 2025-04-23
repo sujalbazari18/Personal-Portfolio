@@ -18,8 +18,8 @@ const ResumeSection = () => {
   
     try {
       const link = document.createElement('a');
-      link.href = "sujal_bazari_1.pdf";
-      link.download = "resume.pdf";
+      link.href = "Sujal_bazari_1.pdf";
+      link.download = "Sujal_bazari_1.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
