@@ -1,18 +1,17 @@
-
 import { Heart } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="py-8 bg-portfolio-dark text-white">
+    <footer className="py-8 bg-transparent text-white">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <a href="#home" className="text-2xl font-bold font-serif">
+            <a href="#home" className="text-2xl font-bold font-serif text-white">
               Sujal Bazari
             </a>
-            <p className="text-gray-400 mt-2">
+            <p className="text-gray-200 mt-2">
               Full Stack Developer
             </p>
           </div>
@@ -23,7 +22,7 @@ const Footer = () => {
                 <a
                   key={item}
                   href={`#${item}`}
-                  className="text-gray-400 hover:text-white transition-colors capitalize text-sm"
+                  className="text-gray-300 hover:text-white transition-colors capitalize text-sm"
                 >
                   {item}
                 </a>
@@ -47,5 +46,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;

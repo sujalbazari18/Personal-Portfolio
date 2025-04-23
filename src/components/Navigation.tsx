@@ -1,9 +1,8 @@
-
 import { useState, useEffect } from 'react';
 
 const Navigation = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,11 +20,11 @@ const Navigation = () => {
   return (
     <header 
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/90 shadow-md backdrop-blur-sm py-2' : 'bg-transparent py-4'
+        isScrolled ? 'bg-[rgba(20,28,43,0.92)] shadow-md backdrop-blur-sm py-2' : 'bg-transparent py-4'
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className="text-portfolio-blue text-xl md:text-2xl font-serif font-bold">
+        <a href="#home" className="text-cyan-300 text-xl md:text-2xl font-serif font-bold drop-shadow">
           Sujal Bazari
         </a>
         
@@ -35,9 +34,9 @@ const Navigation = () => {
           className="md:hidden p-2 focus:outline-none"
           aria-label="Toggle menu"
         >
-          <div className={`w-6 h-0.5 bg-portfolio-dark mb-1.5 transition-transform ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
-          <div className={`w-6 h-0.5 bg-portfolio-dark mb-1.5 transition-opacity ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></div>
-          <div className={`w-6 h-0.5 bg-portfolio-dark transition-transform ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
+          <div className={`w-6 h-0.5 bg-cyan-200 mb-1.5 transition-transform ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
+          <div className={`w-6 h-0.5 bg-cyan-200 mb-1.5 transition-opacity ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></div>
+          <div className={`w-6 h-0.5 bg-cyan-200 transition-transform ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
         </button>
         
         {/* Desktop navigation */}
@@ -46,7 +45,7 @@ const Navigation = () => {
             <a
               key={item}
               href={`#${item}`}
-              className="text-portfolio-dark hover:text-portfolio-blue transition-colors link-underline capitalize"
+              className="text-white hover:text-cyan-300 transition-colors link-underline capitalize"
             >
               {item}
             </a>
@@ -56,7 +55,7 @@ const Navigation = () => {
       
       {/* Mobile menu */}
       <div 
-        className={`md:hidden absolute w-full bg-white shadow-lg transition-all duration-300 ease-in-out ${
+        className={`md:hidden absolute w-full bg-[rgba(30,35,50,0.95)] shadow-lg transition-all duration-300 ease-in-out ${
           mobileMenuOpen ? 'max-h-80 opacity-100 py-4' : 'max-h-0 opacity-0 py-0 overflow-hidden'
         }`}
       >
@@ -66,7 +65,7 @@ const Navigation = () => {
               key={item}
               href={`#${item}`}
               onClick={() => setMobileMenuOpen(false)}
-              className="text-portfolio-dark hover:text-portfolio-blue py-2 transition-colors capitalize"
+              className="text-white hover:text-cyan-300 py-2 transition-colors capitalize"
             >
               {item}
             </a>
