@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 
 const Navigation = () => {
-  const [isScrolled, setIsScrolled = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
