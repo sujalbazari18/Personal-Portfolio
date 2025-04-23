@@ -15,19 +15,17 @@ const ResumeSection = () => {
     e.preventDefault();
     
     // Try to download the file
+  
     try {
-      // Create a link to download the file
       const link = document.createElement('a');
-      link.href = "/resume.pdf";
+      link.href = "./sujal_bazari_1.pdf";
       link.download = "resume.pdf";
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
-      
-      // Show success toast
+
       toast.success("Resume download started!");
     } catch (error) {
-      // Show error toast if something goes wrong
       toast.error("Could not download resume. Please try again later.");
       console.error("Download error:", error);
     }
