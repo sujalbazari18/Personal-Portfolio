@@ -35,7 +35,7 @@ const Navigation = () => (
         className="text-white text-[1.6rem] font-extrabold font-sans tracking-tight"
         style={{ letterSpacing: '-0.5px' }}
       >
-        Suraj Singh
+        Sujal Bazari
       </a>
       {/* Desktop Nav */}
       <div className="hidden md:flex items-center space-x-10">
