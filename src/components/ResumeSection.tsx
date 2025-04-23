@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { 
   Briefcase, 
@@ -46,59 +45,11 @@ const ResumeSection = () => {
               <h3 className="text-2xl font-bold">Work Experience</h3>
             </div>
             
+            
             <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
               
-              <div className="relative flex items-start group">
-                <div className="flex flex-col items-center">
-                  <div className="h-10 w-10 rounded-full border-2 border-portfolio-blue flex items-center justify-center bg-white z-10">
-                    <Calendar size={16} className="text-portfolio-blue" />
-                  </div>
-                  <div className="h-full w-px bg-gray-300"></div>
-                </div>
-                
-                <div className="ml-6 bg-white p-5 rounded-lg shadow-md border-l-4 border-portfolio-blue">
-                  <div className="flex justify-between items-center mb-1">
-                    <h4 className="text-lg font-bold text-portfolio-dark">Full-Stack Web Development</h4>
-                    <span className="text-sm text-gray-500">Mar 2025</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-500 mb-3">
-                    <MapPin size={14} className="mr-1" />
-                    <span>Freelance | Remote</span>
-                  </div>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm">
-                    <li>Developed scalable web applications using modern technologies</li>
-                    <li>Implemented responsive design and cross-browser compatibility</li>
-                    <li>Collaborated with clients to define project requirements</li>
-                    <li>Optimized application performance and user experience</li>
-                  </ul>
-                </div>
-              </div>
               
-              <div className="relative flex items-start group">
-                <div className="flex flex-col items-center">
-                  <div className="h-10 w-10 rounded-full border-2 border-portfolio-blue flex items-center justify-center bg-white z-10">
-                    <Calendar size={16} className="text-portfolio-blue" />
-                  </div>
-                  <div className="h-full w-px bg-gray-300"></div>
-                </div>
-                
-                <div className="ml-6 bg-white p-5 rounded-lg shadow-md border-l-4 border-portfolio-blue">
-                  <div className="flex justify-between items-center mb-1">
-                    <h4 className="text-lg font-bold text-portfolio-dark">Web Development Internship</h4>
-                    <span className="text-sm text-gray-500">Jan 2025</span>
-                  </div>
-                  <div className="flex items-center text-sm text-gray-500 mb-3">
-                    <MapPin size={14} className="mr-1" />
-                    <span>Tech Startup | Learning & Development</span>
-                  </div>
-                  <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm">
-                    <li>Gained hands-on experience in modern web development practices</li>
-                    <li>Assisted in developing internal tools and web applications</li>
-                    <li>Participated in code reviews and agile development processes</li>
-                    <li>Learned advanced frontend and backend development techniques</li>
-                  </ul>
-                </div>
-              </div>
+              
               
               <div className="relative flex items-start group">
                 <div className="flex flex-col items-center">
@@ -128,7 +79,9 @@ const ResumeSection = () => {
           </div>
           
           
+          
           <div className="md:w-1/2 mt-10 md:mt-0">
+            
             <div>
               <div className="flex items-center mb-8">
                 <div className="p-3 bg-portfolio-teal/10 rounded-full mr-4">
