@@ -1,12 +1,6 @@
 
 import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { 
-  Calendar,
-  Code, 
-  ExternalLink,
-  Github
-} from "lucide-react";
+import ProjectCard from "./ProjectCard";
 
 type Project = {
   title: string;
@@ -22,7 +16,7 @@ type Project = {
 
 const ProjectsSection = () => {
   const [filter, setFilter] = useState<string>("all");
-  
+
   const projects: Project[] = [
     {
       title: "Book-Store API | Backend Application",
@@ -69,15 +63,15 @@ const ProjectsSection = () => {
     }
   ];
 
-  const filteredProjects = filter === "all" 
-    ? projects 
+  const filteredProjects = filter === "all"
+    ? projects
     : projects.filter(project => project.category === filter);
 
   return (
     <section id="projects" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="section-title text-center mx-auto">My Projects</h2>
-        
+
         <div className="flex flex-wrap justify-center gap-4 mt-10 mb-12">
           {["all", "backend", "mobile", "system"].map((category) => (
             <button
@@ -93,80 +87,14 @@ const ProjectsSection = () => {
             </button>
           ))}
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
-            <div 
-              key={project.title} 
-              className="bg-white rounded-lg overflow-hidden shadow-lg transition-transform hover:scale-[1.02]"
-              style={{ animationDelay: `${0.2 * index}s` }}
-            >
-              <div className="h-48 overflow-hidden">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover transition-transform hover:scale-110 duration-700"
-                />
-              </div>
-              
-              <div className="p-6">
-                <div className="flex justify-between items-center mb-3">
-                  <Badge className="bg-portfolio-blue/10 text-portfolio-blue">
-                    {project.category}
-                  </Badge>
-                  <div className="flex items-center text-gray-500 text-sm">
-                    <Calendar size={14} className="mr-1" />
-                    {project.date}
-                  </div>
-                </div>
-                
-                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                <p className="text-gray-600 text-sm mb-4">{project.description}</p>
-                
-                <div className="mb-4 flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span 
-                      key={tech} 
-                      className="text-xs px-2 py-1 bg-gray-100 text-gray-600 rounded"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="flex gap-3">
-                  {project.githubUrl && (
-                    <a 
-                      href={project.githubUrl} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-gray-800 hover:text-portfolio-blue"
-                    >
-                      <Github size={18} className="mr-1" />
-                      <span className="text-sm">Code</span>
-                    </a>
-                  )}
-                  {project.liveUrl && (
-                    <a 
-                      href={project.liveUrl} 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center text-gray-800 hover:text-portfolio-blue"
-                    >
-                      <ExternalLink size={18} className="mr-1" />
-                      <span className="text-sm">Live Demo</span>
-                    </a>
-                  )}
-                  <a 
-                    href="#" 
-                    className="flex items-center ml-auto text-portfolio-teal hover:text-portfolio-teal/80 text-sm"
-                  >
-                    <Code size={18} className="mr-1" />
-                    <span>Details</span>
-                  </a>
-                </div>
-              </div>
-            </div>
+            <ProjectCard
+              key={project.title}
+              project={project}
+              animationDelay={0.2 * index}
+            />
           ))}
         </div>
       </div>
