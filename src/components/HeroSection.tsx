@@ -15,7 +15,7 @@ const HeroSection = () => (
       >
         Hi, I'm{" "}
         <span className="text-blue-500" style={{ fontFamily: "inherit" }}>
-          Suraj Singh
+          Sujal Bazari
         </span>
       </h1>
       <p className="mt-6 text-lg md:text-2xl text-gray-200 font-medium font-sans">
@@ -40,3 +40,4 @@ const HeroSection = () => (
 );
 
 export default HeroSection;
+
