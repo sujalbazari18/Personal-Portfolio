@@ -4,10 +4,35 @@ import {
   GraduationCap, 
   Award,
   Calendar,
-  MapPin
+  MapPin,
+  FileDown
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { toast } from "sonner";
 
 const ResumeSection = () => {
+  const handleDownloadCV = (e: React.MouseEvent) => {
+    e.preventDefault();
+    
+    // Try to download the file
+    try {
+      // Create a link to download the file
+      const link = document.createElement('a');
+      link.href = "/resume.pdf";
+      link.download = "resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      // Show success toast
+      toast.success("Resume download started!");
+    } catch (error) {
+      // Show error toast if something goes wrong
+      toast.error("Could not download resume. Please try again later.");
+      console.error("Download error:", error);
+    }
+  };
+
   return (
     <section id="resume" className="py-20">
       <div className="container mx-auto px-4">
@@ -203,16 +228,14 @@ const ResumeSection = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <a 
-            href="#" 
-            className="btn-primary inline-flex items-center"
-            onClick={(e) => {
-              e.preventDefault();
-              window.open("/resume.pdf", "_blank");
-            }}
+          <Button 
+            variant="default"
+            className="btn-primary inline-flex items-center gap-2"
+            onClick={handleDownloadCV}
           >
             Download CV
-          </a>
+            <FileDown size={18} />
+          </Button>
         </div>
       </div>
     </section>
