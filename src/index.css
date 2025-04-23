@@ -43,3 +43,91 @@ header {
   background: #161f32 !important;
   border-bottom: 1px solid #22293b !important;
 }
+
+/* Text color adjustments for visibility */
+.text-gray-100 {
+  color: #f3f4f6 !important;
+}
+.text-gray-200 {
+  color: #e5e7eb !important;
+}
+.text-gray-300 {
+  color: #d1d5db !important;
+}
+.text-gray-400 {
+  color: #9ca3af !important;
+}
+
+/* Dark background sections need lighter text */
+.bg-gray-50, .bg-white {
+  color: #1f2937 !important;
+}
+
+/* Light sections should use dark text */
+.bg-gray-50 h2, .bg-white h2,
+.bg-gray-50 h3, .bg-white h3 {
+  color: #111827 !important;
+}
+
+/* Section title styling */
+.section-title {
+  @apply text-3xl md:text-4xl font-bold mb-3 text-white;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #2988f4;
+}
+
+/* Primary button styling */
+.btn-primary {
+  @apply inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full px-8 py-3 text-base shadow hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500;
+}
+
+/* Skill bar styling */
+.skill-bar {
+  @apply h-2 bg-gray-200 rounded-full overflow-hidden;
+}
+
+.skill-progress {
+  @apply h-full rounded-full bg-portfolio-blue;
+}
+
+/* Project section color fixes */
+#projects .text-portfolio-blue {
+  color: #2988f4 !important;
+}
+
+#projects .text-portfolio-teal {
+  color: #0d9488 !important;
+}
+
+/* Additional fixes for skills section */
+#skills .text-portfolio-dark {
+  color: #f3f4f6 !important;
+}
+
+#skills .text-gray-500 {
+  color: #d1d5db !important;
+}
+
+#skills .bg-gray-100 {
+  background-color: rgba(243, 244, 246, 0.1) !important;
+  color: #e5e7eb !important;
+}
+
+/* Contact section color fixes */
+#contact .text-gray-600,
+#contact .text-portfolio-dark {
+  color: #d1d5db !important;
+}
+

@@ -58,7 +58,7 @@ const Navigation = () => (
             aria-label={ext.label}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-300 hover:text-blue-400 hover:scale-110 transition"
+            className="text-gray-200 hover:text-blue-400 hover:scale-110 transition"
             tabIndex={0}
           >
             {ext.icon}
