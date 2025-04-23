@@ -11,17 +11,17 @@ const navItems = [
 const externalLinks = [
   {
     icon: <Github size={22} />,
-    href: "https://github.com/",
+    href: "https://github.com/sujalbazari18/",
     label: "GitHub",
   },
   {
     icon: <Linkedin size={22} />,
-    href: "https://linkedin.com/",
+    href: "https://linkedin.com/in/sujal-bazari/",
     label: "LinkedIn",
   },
   {
     icon: <Mail size={22} />,
-    href: "mailto:surajsingh@email.com",
+    href: "mailto:sujalbazari@email.com",
     label: "Email",
   },
 ];
