@@ -1,79 +1,73 @@
-import { useState, useEffect } from 'react';
 
-const Navigation = () => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+import { Github, Linkedin, Mail } from "lucide-react";
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
+const navItems = [
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Contact", href: "#contact" },
+];
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+const externalLinks = [
+  {
+    icon: <Github size={22} />,
+    href: "https://github.com/",
+    label: "GitHub",
+  },
+  {
+    icon: <Linkedin size={22} />,
+    href: "https://linkedin.com/",
+    label: "LinkedIn",
+  },
+  {
+    icon: <Mail size={22} />,
+    href: "mailto:surajsingh@email.com",
+    label: "Email",
+  },
+];
 
-  return (
-    <header 
-      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[rgba(20,28,43,0.92)] shadow-md backdrop-blur-sm py-2' : 'bg-transparent py-4'
-      }`}
-    >
-      <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#home" className="text-cyan-300 text-xl md:text-2xl font-serif font-bold drop-shadow">
-          Sujal Bazari
-        </a>
-        
-        {/* Mobile menu button */}
-        <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 focus:outline-none"
-          aria-label="Toggle menu"
-        >
-          <div className={`w-6 h-0.5 bg-cyan-200 mb-1.5 transition-transform ${mobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></div>
-          <div className={`w-6 h-0.5 bg-cyan-200 mb-1.5 transition-opacity ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}></div>
-          <div className={`w-6 h-0.5 bg-cyan-200 transition-transform ${mobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></div>
-        </button>
-        
-        {/* Desktop navigation */}
-        <nav className="hidden md:flex space-x-8">
-          {['home', 'about', 'skills', 'projects', 'resume', 'contact'].map((item) => (
-            <a
-              key={item}
-              href={`#${item}`}
-              className="text-white hover:text-cyan-300 transition-colors link-underline capitalize"
-            >
-              {item}
-            </a>
-          ))}
-        </nav>
-      </div>
-      
-      {/* Mobile menu */}
-      <div 
-        className={`md:hidden absolute w-full bg-[rgba(30,35,50,0.95)] shadow-lg transition-all duration-300 ease-in-out ${
-          mobileMenuOpen ? 'max-h-80 opacity-100 py-4' : 'max-h-0 opacity-0 py-0 overflow-hidden'
-        }`}
+const Navigation = () => (
+  <header className="fixed w-full top-0 z-50 bg-[#161f32] border-b border-[#22293b] shadow-none">
+    <nav className="max-w-6xl mx-auto flex items-center justify-between px-5 py-4">
+      {/* Logo */}
+      <a
+        href="#home"
+        className="text-white text-[1.6rem] font-extrabold font-sans tracking-tight"
+        style={{ letterSpacing: '-0.5px' }}
       >
-        <nav className="flex flex-col space-y-3 px-4">
-          {['home', 'about', 'skills', 'projects', 'resume', 'contact'].map((item) => (
-            <a
-              key={item}
-              href={`#${item}`}
-              onClick={() => setMobileMenuOpen(false)}
-              className="text-white hover:text-cyan-300 py-2 transition-colors capitalize"
-            >
-              {item}
-            </a>
-          ))}
-        </nav>
+        Suraj Singh
+      </a>
+      {/* Desktop Nav */}
+      <div className="hidden md:flex items-center space-x-10">
+        {navItems.map(item => (
+          <a
+            key={item.href}
+            href={item.href}
+            className="text-gray-100 hover:text-blue-400 text-base transition-colors font-semibold"
+          >
+            {item.label}
+          </a>
+        ))}
       </div>
-    </header>
-  );
-};
+      {/* External Links */}
+      <div className="hidden md:flex items-center gap-5 ml-8">
+        {externalLinks.map((ext, idx) => (
+          <a
+            key={ext.label + idx}
+            href={ext.href}
+            aria-label={ext.label}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-300 hover:text-blue-400 hover:scale-110 transition"
+            tabIndex={0}
+          >
+            {ext.icon}
+          </a>
+        ))}
+      </div>
+      {/* Mobile (optional: could be expanded if needed) */}
+    </nav>
+  </header>
+);
 
 export default Navigation;
