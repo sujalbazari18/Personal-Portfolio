@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { 
   Briefcase, 
@@ -223,6 +224,7 @@ const ResumeSection = () => {
               </div>
             </div>
           </div>
+        </div>
         
         <div className="mt-16 text-center">
           <Button 
