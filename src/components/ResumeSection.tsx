@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { 
   Briefcase, 
   GraduationCap, 
@@ -45,7 +45,6 @@ const ResumeSection = () => {
               <h3 className="text-2xl font-bold">Work Experience</h3>
             </div>
             
-            {/* Experience Items */}
             <div className="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
               
               <div className="relative flex items-start group">
@@ -58,18 +57,18 @@ const ResumeSection = () => {
                 
                 <div className="ml-6 bg-white p-5 rounded-lg shadow-md border-l-4 border-portfolio-blue">
                   <div className="flex justify-between items-center mb-1">
-                    <h4 className="text-lg font-bold text-portfolio-dark">Book-Store API Project</h4>
+                    <h4 className="text-lg font-bold text-portfolio-dark">Full-Stack Web Development</h4>
                     <span className="text-sm text-gray-500">Mar 2025</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-500 mb-3">
                     <MapPin size={14} className="mr-1" />
-                    <span>Backend Developer | MongoDB & Node.js</span>
+                    <span>Freelance | Remote</span>
                   </div>
                   <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm">
-                    <li>Designed and deployed a scalable RESTful API for managing book inventory</li>
-                    <li>Enhanced security protocols with JWT token-based authentication</li>
-                    <li>Boosted query performance through efficient database integration</li>
-                    <li>Implemented structured error handling and input validation</li>
+                    <li>Developed scalable web applications using modern technologies</li>
+                    <li>Implemented responsive design and cross-browser compatibility</li>
+                    <li>Collaborated with clients to define project requirements</li>
+                    <li>Optimized application performance and user experience</li>
                   </ul>
                 </div>
               </div>
@@ -84,18 +83,18 @@ const ResumeSection = () => {
                 
                 <div className="ml-6 bg-white p-5 rounded-lg shadow-md border-l-4 border-portfolio-blue">
                   <div className="flex justify-between items-center mb-1">
-                    <h4 className="text-lg font-bold text-portfolio-dark">Smart Voice Assistant</h4>
+                    <h4 className="text-lg font-bold text-portfolio-dark">Web Development Internship</h4>
                     <span className="text-sm text-gray-500">Jan 2025</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-500 mb-3">
                     <MapPin size={14} className="mr-1" />
-                    <span>Mobile Developer | React Native</span>
+                    <span>Tech Startup | Learning & Development</span>
                   </div>
                   <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm">
-                    <li>Built an interactive mobile assistant using React Native</li>
-                    <li>Incorporated real-time voice recognition APIs</li>
-                    <li>Connected external platforms for weather, scheduling updates</li>
-                    <li>Developed clean and responsive UI with immediate visual feedback</li>
+                    <li>Gained hands-on experience in modern web development practices</li>
+                    <li>Assisted in developing internal tools and web applications</li>
+                    <li>Participated in code reviews and agile development processes</li>
+                    <li>Learned advanced frontend and backend development techniques</li>
                   </ul>
                 </div>
               </div>
@@ -109,23 +108,24 @@ const ResumeSection = () => {
                 
                 <div className="ml-6 bg-white p-5 rounded-lg shadow-md border-l-4 border-portfolio-blue">
                   <div className="flex justify-between items-center mb-1">
-                    <h4 className="text-lg font-bold text-portfolio-dark">Linux File System Simulator</h4>
+                    <h4 className="text-lg font-bold text-portfolio-dark">Technical Support</h4>
                     <span className="text-sm text-gray-500">Jul 2024</span>
                   </div>
                   <div className="flex items-center text-sm text-gray-500 mb-3">
                     <MapPin size={14} className="mr-1" />
-                    <span>System Developer | C++</span>
+                    <span>IT Services | Customer Support</span>
                   </div>
                   <ul className="list-disc list-inside text-gray-700 space-y-2 text-sm">
-                    <li>Engineered a Linux-like file system simulator with C++</li>
-                    <li>Implemented essential file management commands</li>
-                    <li>Optimized search and indexing algorithms for better efficiency</li>
-                    <li>Applied OOP principles to model real-world file system structure</li>
+                    <li>Provided technical support for software and hardware issues</li>
+                    <li>Diagnosed and resolved complex technical problems</li>
+                    <li>Documented troubleshooting steps and customer interactions</li>
+                    <li>Maintained high customer satisfaction ratings</li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
+          
           
           <div className="md:w-1/2 mt-10 md:mt-0">
             <div>
@@ -223,7 +223,6 @@ const ResumeSection = () => {
               </div>
             </div>
           </div>
-        </div>
         
         <div className="mt-16 text-center">
           <Button 
