@@ -19,7 +19,7 @@ const HeroSection = () => (
         </span>
       </h1>
       <p className="mt-6 text-lg md:text-2xl text-gray-200 font-medium font-sans">
-        Full Stack Developer & Software Engineer
+        Backend Developer & Software Engineer
       </p>
       <div className="flex gap-5 mt-10">
         <a
