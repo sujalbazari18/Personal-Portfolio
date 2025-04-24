@@ -1,5 +1,4 @@
-
-import { useState, FormEvent } from "react";
+import { useState, FormEvent, useEffect } from "react";
 import { 
   Phone, 
   Mail, 
@@ -8,6 +7,7 @@ import {
   Github,
   Send
 } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +19,11 @@ const ContactSection = () => {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<null | 'success' | 'error'>(null);
+  
+  // Initialize EmailJS once when component mounts
+  useEffect(() => {
+    emailjs.init("kBVforwAbH6UxZkpW");
+  }, []);
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -32,10 +37,22 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
     try {
-      // In a real app, you'd send the form data to your backend
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      // Send email using EmailJS
+      const response = await emailjs.send(
+        "service_lhatla8", // Email service ID
+        "template_3fz5dla", // Email template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }
+      );
+      
+      console.log("Email sent successfully:", response);
+      
+      // Handle success
       setSubmitStatus('success');
       setFormData({
         name: "",
@@ -44,6 +61,7 @@ const ContactSection = () => {
         message: "",
       });
     } catch (error) {
+      console.error("Error sending email:", error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
