@@ -25,7 +25,7 @@ const ProjectsSection = () => {
       category: "backend",
       image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?auto=format&fit=crop&q=80&w=1528",
       technologies: ["Node.js", "Express.js", "MongoDB", "JWT", "REST API"],
-      githubUrl: "https://github.com/sujalbazari18/",
+      githubUrl: "https://github.com/sujalbazari18/Book_Store",
       achievements: [
         "Enhanced security protocols, cutting unauthorized access by 35% through JWT token-based authentication",
         "Boosted query performance by 22% through efficient integration of CRUD endpoints with database logic",
@@ -54,7 +54,7 @@ const ProjectsSection = () => {
       category: "system",
       image: "https://images.unsplash.com/photo-1629654297299-c8506221ca97?auto=format&fit=crop&q=80&w=1474",
       technologies: ["C++", "Data Structures", "OOP", "File System Architecture"],
-      githubUrl: "https://github.com/sujalbazari18/",
+      githubUrl: "https://github.com/sujalbazari18/-Advanced-Linux-File-System-Management-Using-C-with-Data-Structures-and-Algorithms-",
       achievements: [
         "Implemented essential commands for managing files and directories including create, delete, and rename",
         "Increased retrieval efficiency by 40% through optimized search and indexing algorithms",
