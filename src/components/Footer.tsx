@@ -37,7 +37,7 @@ const Footer = () => {
           </p>
           
           <p className="text-gray-400 text-sm flex items-center">
-            Created by SUJAL BAZARI
+            Developed by SUJAL BAZARI using react & Tailwind CSS
           </p>
         </div>
       </div>
