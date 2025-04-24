@@ -63,7 +63,7 @@ const ContactSection = () => {
         <div className="mt-16 flex flex-col lg:flex-row gap-12">
           <div className="lg:w-5/12">
             <h3 className="text-2xl font-bold mb-6">Let's Connect</h3>
-            <p className="text-gray-600 mb-8">
+            <p className="text-blue-900 mb-8">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Feel free to reach out to me using the contact information or the form.
             </p>
             
