@@ -40,7 +40,7 @@ const ProjectsSection = () => {
       category: "mobile",
       image: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&q=80&w=1636",
       technologies: ["React Native", "Voice Recognition APIs", "JavaScript", "Redux"],
-      githubUrl: "https://github.com/sujalbazari18/",
+      githubUrl: "https://github.com/sujalbazari18/SmartVoiceAssistant",
       achievements: [
         "Incorporated real-time voice recognition APIs to interpret and respond to spoken instructions",
         "Connected external platforms to enable updates for weather, scheduling, and general queries",
