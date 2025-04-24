@@ -12,7 +12,7 @@ const Footer = () => {
               Sujal Bazari
             </a>
             <p className="text-gray-200 mt-2">
-              Full Stack Developer
+              Backend Developer
             </p>
           </div>
           
@@ -37,9 +37,7 @@ const Footer = () => {
           </p>
           
           <p className="text-gray-400 text-sm flex items-center">
-            Made with 
-            <Heart size={14} className="mx-1 text-red-500" />
-            using React & Tailwind CSS
+            Created by SUJAL BAZARI
           </p>
         </div>
       </div>
