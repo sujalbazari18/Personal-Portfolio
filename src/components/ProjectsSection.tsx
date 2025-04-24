@@ -34,7 +34,7 @@ const ProjectsSection = () => {
       ]
     },
     {
-      title: "Smart Voice Assistant | Mobile Application",
+      title: "Smart Voice Assistant | Android",
       description: "Built an interactive mobile assistant using React Native for voice-command-driven task automation with real-time voice recognition.",
       date: "Jan 2025",
       category: "mobile",
