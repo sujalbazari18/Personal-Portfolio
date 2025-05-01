@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
 @tailwind base;
 @tailwind components;
@@ -192,4 +193,45 @@ header {
   .flip-card-front {
     padding: 1rem 0.5rem !important;
   }
+}
+
+/* Resume section animations */
+@keyframes bounce-soft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-bounce-soft {
+  animation: bounce-soft 3s ease-in-out infinite;
+}
+
+/* Timeline animations */
+.timeline-item {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Certificate card animations */
+.cert-card {
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* Achievement item animations */
+.achievement-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-item::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgba(245, 158, 11, 0.4);
+  transition: width 0.5s ease;
+}
+
+.achievement-item:hover::after {
+  width: 100%;
 }
