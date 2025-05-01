@@ -36,7 +36,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Avatar className="w-36 h-36 border-4 border-blue-500/30 shadow-lg shadow-blue-500/20">
-              <AvatarImage src="/lovable-uploads/4973b318-816a-4064-9c8a-3dec2d1c603b.png" alt="Sujal Bazari" />
+              <AvatarImage src="/lovable-uploads/366d4ef8-2890-4841-8f27-4a90f99ead4d.png" alt="Sujal Bazari" />
               <AvatarFallback className="text-3xl bg-gradient-to-br from-blue-500 to-indigo-700 text-white">SB</AvatarFallback>
             </Avatar>
             <div className="absolute inset-0 rounded-full bg-blue-500/10 animate-pulse-slow"></div>
