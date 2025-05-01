@@ -1,7 +1,6 @@
-
 import React, { useCallback, useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ForceGraph2D } from 'react-force-graph-2d';
+import ForceGraph2D from 'react-force-graph-2d';
 import { useToast } from "@/hooks/use-toast";
 import { 
   Box, 
@@ -27,6 +26,9 @@ interface SkillNode {
   icon?: string;
   category?: string;
   level?: number;
+  // Adding x and y properties to fix type errors
+  x?: number;
+  y?: number;
 }
 
 interface SkillLink {
