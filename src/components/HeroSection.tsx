@@ -4,7 +4,6 @@ import TypewriterEffect from "./TypewriterEffect";
 import ParticleBackground from "./ParticleBackground";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const HeroSection = () => {
   const titles = [
@@ -28,21 +27,6 @@ const HeroSection = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="mb-8">
-          <motion.div
-            className="avatar-container relative"
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-          >
-            <Avatar className="w-36 h-36 border-4 border-blue-500/30 shadow-lg shadow-blue-500/20">
-              <AvatarImage src="/lovable-uploads/366d4ef8-2890-4841-8f27-4a90f99ead4d.png" alt="Sujal Bazari" />
-              <AvatarFallback className="text-3xl bg-gradient-to-br from-blue-500 to-indigo-700 text-white">SB</AvatarFallback>
-            </Avatar>
-            <div className="absolute inset-0 rounded-full bg-blue-500/10 animate-pulse-slow"></div>
-          </motion.div>
-        </div>
-
         <motion.h1
           className="text-[2.5rem] md:text-[4rem] font-extrabold tracking-tighter text-white"
           style={{ lineHeight: "1.13" }}
