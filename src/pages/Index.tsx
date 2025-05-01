@@ -1,5 +1,5 @@
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
@@ -9,11 +9,31 @@ import ResumeSection from "@/components/ResumeSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import { setupScrollAnimation } from "@/utils/scrollAnimation";
-import BackgroundTechIcons from "@/components/BackgroundTechIcons";
+import { motion } from "framer-motion";
 
 const Index = () => {
+  const sectionsRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     setupScrollAnimation();
+
+    // Setup intersection observer for section animations
+    const sections = document.querySelectorAll("section[id]");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("in-view");
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+
+    sections.forEach((section) => {
+      section.classList.add("section-glow");
+      observer.observe(section);
+    });
 
     // Preload images
     const imageUrls = [
@@ -28,11 +48,14 @@ const Index = () => {
       const img = new Image();
       img.src = url;
     });
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return (
-    <div className="min-h-screen relative font-sans">
-      <BackgroundTechIcons />
+    <div ref={sectionsRef} className="min-h-screen relative font-sans">
       <Navigation />
       <HeroSection />
       <AboutSection />
@@ -43,10 +66,15 @@ const Index = () => {
       <Footer />
 
       {/* Back to top button */}
-      <a 
+      <motion.a 
         href="#home" 
-        className="fixed bottom-6 right-6 p-3 bg-portfolio-blue text-white rounded-full shadow-lg hover:bg-portfolio-blue/90 transition-colors duration-300"
+        className="fixed bottom-6 right-6 p-3 bg-blue-500/80 hover:bg-blue-500 text-white rounded-full shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 transition-all duration-300"
         aria-label="Back to top"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3, delay: 1 }}
       >
         <svg 
           xmlns="http://www.w3.org/2000/svg" 
@@ -62,7 +90,7 @@ const Index = () => {
             d="M5 15l7-7 7 7" 
           />
         </svg>
-      </a>
+      </motion.a>
     </div>
   );
 };

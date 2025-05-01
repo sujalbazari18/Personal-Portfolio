@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Space+Grotesk:wght@400;500;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,6 +10,7 @@ body {
   background: linear-gradient(135deg, #192134 0%, #222b41 100%);
   color: #f4f7fa;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Button tweaks to match screenshot colors */
@@ -131,6 +132,45 @@ header {
   color: #d1d5db !important;
 }
 
+/* New section with section glow effect */
+.section-glow {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-glow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(66, 153, 225, 0.3), transparent);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.section-glow.in-view::before {
+  opacity: 1;
+}
+
+/* Avatar glow effect */
+.avatar-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 100%;
+  padding: 6px;
+  background: linear-gradient(135deg, rgba(66, 153, 225, 0.4), rgba(129, 140, 248, 0.2));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
 /* Flip card styles */
 .flip-card {
   perspective: 1500px;
@@ -234,4 +274,16 @@ header {
 
 .achievement-item:hover::after {
   width: 100%;
+}
+
+/* Add scrolling inView observer for section animations */
+.scroll-trigger {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-trigger.in-view {
+  opacity: 1;
+  transform: translateY(0);
 }
