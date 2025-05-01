@@ -231,7 +231,9 @@ const ResumeSection = () => {
         </div>
       </div>
 
-      <style jsx>{`
+      {/* Fixed the style tag by removing the jsx attribute */}
+      <style>
+        {`
         @keyframes expandWidth {
           from { width: 0; }
           to { width: 100%; }
@@ -249,7 +251,8 @@ const ResumeSection = () => {
         [data-state="open"] .collapsible-icon {
           transform: rotate(90deg);
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };
