@@ -93,6 +93,23 @@ header {
   @apply inline-block bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-full px-8 py-3 text-base shadow hover:shadow-lg transition-all focus:outline-none focus:ring-2 focus:ring-blue-500;
 }
 
+/* Animation classes */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Hero button animation */
+.hero-button {
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0;
+  transform: translateY(20px);
+}
+
 /* Skill bar styling */
 .skill-bar {
   @apply h-2 bg-gray-200 rounded-full overflow-hidden;
