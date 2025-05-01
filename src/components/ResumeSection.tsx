@@ -59,8 +59,8 @@ const ResumeSection = () => {
         {/* Education Section */}
         <section id="education" className="mb-20">
           <div className="flex items-center justify-center mb-12 animate-fade-in">
-            <div className="bg-[#1a3246] rounded-full p-4 mr-4 shadow-lg shadow-[#00a0a0]/20">
-              <GraduationCap className="text-[#00a0a0]" size={32} />
+            <div className="bg-[#2d4b66] rounded-full p-4 mr-4 shadow-lg shadow-[#4ecdc4]/20">
+              <GraduationCap className="text-[#4ecdc4]" size={32} />
             </div>
             <h2 className="text-3xl font-bold">Education</h2>
           </div>
@@ -70,26 +70,29 @@ const ResumeSection = () => {
             <div className="relative mb-8 timeline-item transition-all duration-500 ease-out">
               <div className="flex items-start">
                 <div className="hidden md:flex flex-col items-center mr-6">
-                  <div className="h-12 w-12 rounded-full border-2 border-[#00a0a0] bg-[#1a3246] flex items-center justify-center shadow-[0_0_15px_rgba(0,160,160,0.3)]">
-                    <GraduationCap size={20} className="text-[#00a0a0]" />
+                  <div className="h-12 w-12 rounded-full border-2 border-[#4ecdc4] bg-[#2d4b66] flex items-center justify-center shadow-[0_0_15px_rgba(78,205,196,0.3)]">
+                    <GraduationCap size={20} className="text-[#4ecdc4]" />
                   </div>
-                  <div className="h-full w-px bg-gradient-to-b from-[#00a0a0] to-transparent mt-2"></div>
+                  <div className="h-full w-px bg-gradient-to-b from-[#4ecdc4] to-transparent mt-2"></div>
                 </div>
                 
-                <Card className="w-full bg-[#262b3c] border-l-4 border-[#00a0a0] hover:shadow-[0_5px_20px_rgba(0,160,160,0.2)] transition-all duration-300 group">
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-center mb-2">
-                      <h3 className="text-xl font-bold text-white group-hover:text-[#00a0a0] transition-colors duration-300">Lovely Professional University</h3>
-                      <span className="text-gray-300">2022 - 2026</span>
+                <Card className="w-full bg-[#262b3c] border-none hover:shadow-[0_5px_20px_rgba(78,205,196,0.2)] transition-all duration-300 group rounded-xl overflow-hidden">
+                  <CardContent className="p-6 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-2 h-full bg-[#4ecdc4] rounded-r-full"></div>
+                    <div className="ml-2">
+                      <div className="flex justify-between items-center mb-2">
+                        <h3 className="text-xl font-bold text-white group-hover:text-[#4ecdc4] transition-colors duration-300">Lovely Professional University</h3>
+                        <span className="text-gray-300">2022 - 2026</span>
+                      </div>
+                      <div className="flex items-center text-gray-300 mb-3">
+                        <MapPin size={16} className="mr-2" />
+                        <span>Jalandhar, Punjab</span>
+                      </div>
+                      <p className="text-gray-200">
+                        B.Tech in Computer Science and Engineering<br/>
+                        <span className="text-[#4ecdc4] font-medium">CGPA: 7.84</span>
+                      </p>
                     </div>
-                    <div className="flex items-center text-gray-300 mb-3">
-                      <MapPin size={16} className="mr-2" />
-                      <span>Jalandhar, Punjab</span>
-                    </div>
-                    <p className="text-gray-200">
-                      B.Tech in Computer Science and Engineering<br/>
-                      <span className="text-[#00a0a0] font-medium">CGPA: 7.84</span>
-                    </p>
                   </CardContent>
                 </Card>
               </div>
@@ -99,25 +102,28 @@ const ResumeSection = () => {
             <div className="relative timeline-item transition-all duration-500 ease-out">
               <div className="flex items-start">
                 <div className="hidden md:flex flex-col items-center mr-6">
-                  <div className="h-12 w-12 rounded-full border-2 border-[#00a0a0] bg-[#1a3246] flex items-center justify-center shadow-[0_0_15px_rgba(0,160,160,0.3)]">
-                    <GraduationCap size={20} className="text-[#00a0a0]" />
+                  <div className="h-12 w-12 rounded-full border-2 border-[#4ecdc4] bg-[#2d4b66] flex items-center justify-center shadow-[0_0_15px_rgba(78,205,196,0.3)]">
+                    <GraduationCap size={20} className="text-[#4ecdc4]" />
                   </div>
                 </div>
                 
-                <Card className="w-full bg-[#262b3c] border-l-4 border-[#00a0a0] hover:shadow-[0_5px_20px_rgba(0,160,160,0.2)] transition-all duration-300 group">
-                  <CardContent className="p-6">
-                    <div className="flex justify-between items-center mb-2">
-                      <h3 className="text-xl font-bold text-white group-hover:text-[#00a0a0] transition-colors duration-300">Santi Niketan School</h3>
-                      <span className="text-gray-300">2020 - 2021</span>
+                <Card className="w-full bg-[#262b3c] border-none hover:shadow-[0_5px_20px_rgba(78,205,196,0.2)] transition-all duration-300 group rounded-xl overflow-hidden">
+                  <CardContent className="p-6 relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-2 h-full bg-[#4ecdc4] rounded-r-full"></div>
+                    <div className="ml-2">
+                      <div className="flex justify-between items-center mb-2">
+                        <h3 className="text-xl font-bold text-white group-hover:text-[#4ecdc4] transition-colors duration-300">Santi Niketan School</h3>
+                        <span className="text-gray-300">2020 - 2021</span>
+                      </div>
+                      <div className="flex items-center text-gray-300 mb-3">
+                        <MapPin size={16} className="mr-2" />
+                        <span>Balotra, Rajasthan</span>
+                      </div>
+                      <p className="text-gray-200">
+                        12th with Science<br/>
+                        <span className="text-[#4ecdc4] font-medium">Percentage: 88.60%</span>
+                      </p>
                     </div>
-                    <div className="flex items-center text-gray-300 mb-3">
-                      <MapPin size={16} className="mr-2" />
-                      <span>Balotra, Rajasthan</span>
-                    </div>
-                    <p className="text-gray-200">
-                      12th with Science<br/>
-                      <span className="text-[#00a0a0] font-medium">Percentage: 88.60%</span>
-                    </p>
                   </CardContent>
                 </Card>
               </div>
@@ -128,8 +134,8 @@ const ResumeSection = () => {
         {/* Certifications & Achievements Section */}
         <section id="certifications" className="mb-12">
           <div className="flex items-center justify-center mb-12 animate-fade-in">
-            <div className="bg-[#2b2515] rounded-full p-4 mr-4 shadow-lg shadow-[#f59e0b]/20">
-              <Award className="text-[#f59e0b]" size={32} />
+            <div className="bg-[#433367] rounded-full p-4 mr-4 shadow-lg shadow-[#ff6b6b]/20">
+              <Award className="text-[#ff6b6b]" size={32} />
             </div>
             <h2 className="text-3xl font-bold">Certifications & Achievements</h2>
           </div>
@@ -137,12 +143,13 @@ const ResumeSection = () => {
           <div className="max-w-3xl mx-auto space-y-6">
             {/* First Certification Card */}
             <Collapsible>
-              <Card className="bg-[#262b3c] border-l-4 border-[#f59e0b] cert-card hover:shadow-[0_5px_20px_rgba(245,158,11,0.2)] transition-all duration-300">
-                <CardContent className="p-6">
+              <Card className="bg-[#262b3c] border-none cert-card hover:shadow-[0_5px_20px_rgba(255,107,107,0.2)] transition-all duration-300 rounded-xl overflow-hidden">
+                <CardContent className="p-6 relative">
+                  <div className="absolute top-0 left-0 w-2 h-full bg-[#ff6b6b] rounded-r-full"></div>
                   <CollapsibleTrigger className="w-full">
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center ml-2">
                       <div>
-                        <h3 className="text-xl font-bold text-white hover:text-[#f59e0b] transition-colors duration-300 text-left">Data Structures & Algorithms (DSA) Certification</h3>
+                        <h3 className="text-xl font-bold text-white hover:text-[#ff6b6b] transition-colors duration-300 text-left">Data Structures & Algorithms (DSA) Certification</h3>
                         <div className="mt-2 text-gray-300 text-left">Udemy</div>
                       </div>
                       <div className="flex items-center">
@@ -151,7 +158,7 @@ const ResumeSection = () => {
                       </div>
                     </div>
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="pt-4 text-gray-300">
+                  <CollapsibleContent className="pt-4 text-gray-300 ml-2">
                     <Separator className="my-3 bg-gray-700" />
                     <p className="text-sm">
                       Comprehensive certification covering advanced data structures and algorithms concepts
@@ -165,12 +172,13 @@ const ResumeSection = () => {
             
             {/* Second Certification Card */}
             <Collapsible>
-              <Card className="bg-[#262b3c] border-l-4 border-[#f59e0b] cert-card hover:shadow-[0_5px_20px_rgba(245,158,11,0.2)] transition-all duration-300">
-                <CardContent className="p-6">
+              <Card className="bg-[#262b3c] border-none cert-card hover:shadow-[0_5px_20px_rgba(255,107,107,0.2)] transition-all duration-300 rounded-xl overflow-hidden">
+                <CardContent className="p-6 relative">
+                  <div className="absolute top-0 left-0 w-2 h-full bg-[#ff6b6b] rounded-r-full"></div>
                   <CollapsibleTrigger className="w-full">
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center ml-2">
                       <div>
-                        <h3 className="text-xl font-bold text-white hover:text-[#f59e0b] transition-colors duration-300 text-left">Privacy and Security of Social Media and Cloud Computing</h3>
+                        <h3 className="text-xl font-bold text-white hover:text-[#ff6b6b] transition-colors duration-300 text-left">Privacy and Security of Social Media and Cloud Computing</h3>
                         <div className="mt-2 text-gray-300 text-left">NPTEL</div>
                       </div>
                       <div className="flex items-center">
@@ -179,7 +187,7 @@ const ResumeSection = () => {
                       </div>
                     </div>
                   </CollapsibleTrigger>
-                  <CollapsibleContent className="pt-4 text-gray-300">
+                  <CollapsibleContent className="pt-4 text-gray-300 ml-2">
                     <Separator className="my-3 bg-gray-700" />
                     <p className="text-sm">
                       In-depth exploration of security challenges in social media platforms and cloud environments.
@@ -192,27 +200,30 @@ const ResumeSection = () => {
             </Collapsible>
             
             {/* Achievements Card with Animation */}
-            <Card className="bg-[#262b3c] border-l-4 border-[#f59e0b] cert-card hover:shadow-[0_5px_20px_rgba(245,158,11,0.2)] transition-all duration-300">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-white mb-3 relative">
-                  <span className="relative inline-block">
-                    Achievements
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#f59e0b] animate-[expandWidth_2s_ease_forwards]"></span>
-                  </span>
-                </h3>
-                <ul className="list-none text-gray-200 space-y-3 ml-2">
-                  {[
-                    "Achieved 1580+ rating on LeetCode with 400+ solved problems",
-                    "Earned 2-star rating on CodeChef showcasing competitive programming proficiency",
-                    "Secured top 10 rank in Capture the Flag (CTF) competition",
-                    "Participated in \"Incredible India V\" cultural showcase"
-                  ].map((achievement, index) => (
-                    <li key={index} className="pl-6 relative achievement-item opacity-0 animate-[fadeIn_0.5s_ease_forwards]" style={{ animationDelay: `${0.3 + index * 0.2}s` }}>
-                      <Award className="absolute left-0 top-1 text-[#f59e0b]" size={16} />
-                      {achievement}
-                    </li>
-                  ))}
-                </ul>
+            <Card className="bg-[#262b3c] border-none cert-card hover:shadow-[0_5px_20px_rgba(255,107,107,0.2)] transition-all duration-300 rounded-xl overflow-hidden">
+              <CardContent className="p-6 relative">
+                <div className="absolute top-0 left-0 w-2 h-full bg-[#ff6b6b] rounded-r-full"></div>
+                <div className="ml-2">
+                  <h3 className="text-xl font-bold text-white mb-3 relative">
+                    <span className="relative inline-block">
+                      Achievements
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#ff6b6b] animate-[expandWidth_2s_ease_forwards]"></span>
+                    </span>
+                  </h3>
+                  <ul className="list-none text-gray-200 space-y-3">
+                    {[
+                      "Achieved 1580+ rating on LeetCode with 400+ solved problems",
+                      "Earned 2-star rating on CodeChef showcasing competitive programming proficiency",
+                      "Secured top 10 rank in Capture the Flag (CTF) competition",
+                      "Participated in \"Incredible India V\" cultural showcase"
+                    ].map((achievement, index) => (
+                      <li key={index} className="pl-6 relative achievement-item opacity-0 animate-[fadeIn_0.5s_ease_forwards]" style={{ animationDelay: `${0.3 + index * 0.2}s` }}>
+                        <Award className="absolute left-0 top-1 text-[#ff6b6b]" size={16} />
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </CardContent>
             </Card>
           </div>
@@ -222,7 +233,7 @@ const ResumeSection = () => {
         <div className="text-center mt-12">
           <Button 
             variant="default"
-            className="bg-[#00a0a0] hover:bg-[#008080] text-white inline-flex items-center gap-2 px-6 py-6 rounded-md transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[0_5px_20px_rgba(0,160,160,0.4)]"
+            className="bg-gradient-to-r from-[#4ecdc4] to-[#2d4b66] hover:opacity-90 text-white inline-flex items-center gap-2 px-6 py-6 rounded-full transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-[0_5px_20px_rgba(78,205,196,0.4)]"
             onClick={handleDownloadCV}
           >
             <span className="text-lg">Download CV</span>
@@ -231,7 +242,6 @@ const ResumeSection = () => {
         </div>
       </div>
 
-      {/* Fixed the style tag by removing the jsx attribute */}
       <style>
         {`
         @keyframes expandWidth {
